@@ -6,7 +6,7 @@
 #    By: ldevy <ldevy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/15 14:28:40 by ldevy             #+#    #+#              #
-#    Updated: 2021/12/20 21:45:19 by ldevy            ###   ########.fr        #
+#    Updated: 2024/06/19 20:12:00 by ldevy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ ${NAME}:	${OBJ}
 	ar -rcs ${NAME} ${OBJ}
 	
 .c.o:
-	${CC} ${FLAGS} -I includes -c $< -o ${<:.c=.o}
+	@${CC} ${FLAGS} -I includes -c $< -o ${<:.c=.o}
 
 clean: 
 	rm -f ${OBJ} 
